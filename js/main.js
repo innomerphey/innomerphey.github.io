@@ -3,43 +3,63 @@ $(document).ready(function () {
     //slider
     $('#slider').slick({
       arrows: false,
+      infinite: true,
       initialSlide: 1,
-      speed: 300,
+      speed: 1000,
       slidesToScroll: 2,
       // slidesToShow: 6,
       variableWidth: true,
       centerMode: true,
       adaptiveHeight: true,
-      mobileFirst: true,
-      // autoplay: true,
-      // autoplaySpeed: 1000,
-      responsive: [
-        {
-          breakpoint: 1920,
-          settings: {
-            centerPadding: '40px',
-            // slidesToShow: 5
-          }
-        },
-
-      ]
+      // mobileFirst: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      // responsive: [
+      //   {
+      //     breakpoint: 1920,
+      //     settings: {
+      //       centerPadding: '40px',
+      //       // slidesToShow: 5
+      //     }
+      //   },
+      //
+      // ]
 
     })
 
-    // Inline popups
-    $('.form__submit').magnificPopup({
-      removalDelay: 500, //delay removal by X to allow out-animation
-      callbacks: {
-        beforeOpen: function() {
-          this.st.mainClass = this.st.el.attr('data-effect');
-        }
+    //form validator
+    $('[data-form]').validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        lastname: {
+          required: true,
+          minlength: 2,
+        },
+        email: {
+          required: true,
+          email: true
+        },
       },
-    });
+      errorPlacement: function (error, element) {
+        error.insertAfter(element.parent())
+      },
+      submitHandler: function () {
+        saveFormData()
+        updatePopupContentNode()
+        openPopup()
+      }
+    })
+
+    // popups
 
 
   }
 )
-// ---------------------------------------------------------
+// ==========================================================
+
 
 const PRICE_MIN = 1200
 const PRICE_MAX = 4599
@@ -59,15 +79,67 @@ askElement.innerText = (bid + randFloat(0, MAX_SPREAD)).toFixed(2)
 
 // ---------------------------------------------------------
 
-// const buttonSubmit = document.querySelector('.form__submit')
-//
-// buttonSubmit.onSubmit = function (event) {
-//   let target = event.target;
-//   event.preventDefault();
-//   let firstName, lastName, email;
-//
-//   firstName = document.getElementById('firstname');
-//   lastName = document.getElementById('lastname');
-//   email = document.getElementById('email');
-//   alert(firstName.textContent);
-// }
+function openPopup() {
+  $.magnificPopup.open({
+    items: {
+      src: '#popup-content',
+    },
+    type: 'inline',
+    removalDelay: 500,
+    callbacks: {
+      beforeOpen: function () {
+        this.st.mainClass = 'mfp-zoom-in'
+      }
+    },
+    disableOn: function () {
+      // return validator.form()
+      return true
+    },
+  })
+
+}
+
+const NAME_KEY = 'name'
+const LASTNAME_KEY = 'last_name'
+const EMAIL_KEY = 'email'
+
+function saveFormData() {
+
+  let [name, lastName, email] = [
+    document.querySelector('#name').value,
+    document.querySelector('#lastname').value,
+    document.querySelector('#email').value
+  ]
+
+  sessionStorage.setItem(NAME_KEY, name)
+  sessionStorage.setItem(LASTNAME_KEY, lastName)
+  sessionStorage.setItem(EMAIL_KEY, email);
+
+  [name, lastName, email] = [
+    sessionStorage.getItem(NAME_KEY),
+    sessionStorage.getItem(LASTNAME_KEY),
+    sessionStorage.getItem(EMAIL_KEY)
+  ]
+
+  console.log(name, lastName, email)
+
+}
+
+function updatePopupContentNode() {
+
+  const popupContent = document.querySelector('#popup-content')
+  if (popupContent) {
+    const name = sessionStorage.getItem(NAME_KEY)
+    const lastname = sessionStorage.getItem(LASTNAME_KEY)
+    const email = sessionStorage.getItem(EMAIL_KEY)
+
+    $('[data-name]').text(name)
+    $('[data-lastname]').text(lastname)
+    $('[data-email]').text(email)
+  }
+
+}
+
+
+
+

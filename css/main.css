@@ -308,6 +308,18 @@ textarea {
   background-size: contain;
 }
 
+@media only screen and (max-width: 1900px){
+  .page::before {
+
+  }
+}
+
+@media only screen and (max-width: 1700px){
+  .page::before {
+
+  }
+}
+
 .page__inner {
   display: flex;
   justify-content: space-between;
@@ -324,6 +336,7 @@ textarea {
 
 .page__aside {
   max-width: 342px;
+  padding-bottom: 38px;
 }
 
 .page__profit {
@@ -494,6 +507,7 @@ textarea {
   padding-left: 0;
 }
 
+
 /*
 * offer
 */
@@ -570,7 +584,6 @@ textarea {
   margin: 0 0 32px 20px;
 }
 
-/* TODO: uncomment */
 .profit__slider {
 }
 
@@ -632,12 +645,33 @@ textarea {
 
 .popup {
   position: relative;
-  background: #FFF;
-  padding: 25px;
+  background: white;
   width:auto;
   max-width: 400px;
   margin: 0 auto;
+  border-radius: 4px;
+  padding: 30px 15px;
 }
+
+.popup__header {
+  text-align: center;
+  font-size: 27px;
+  line-height: 27px;
+  font-weight: 800;
+  margin: 0 auto 30px;
+
+}
+
+.popup__text {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #eceef1;
+  border-radius: 21px;
+  padding: 18px;
+  margin: 0 0 15px;
+
+}
+
 
 /* ====== Zoom effect ====== */
 .mfp-zoom-in {
