@@ -2,16 +2,27 @@
   "name": "normo-test",
   "version": "0.0.1",
   "description": "",
-  "keywords": ["test, normo"],
+  "keywords": [
+    "test, normo"
+  ],
   "license": "",
   "author": "",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
   }
 }
