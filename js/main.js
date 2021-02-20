@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //slider
+    // slider
     $('#slider').slick({
       arrows: false,
       infinite: true,
@@ -53,7 +53,8 @@ $(document).ready(function () {
       }
     })
 
-    // popups
+    // fitVids resize video iframe
+    $('[data-video]').fitVids()
 
 
   }

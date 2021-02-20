@@ -13,7 +13,7 @@
 
 html {
   color: #222222;
-  font-size: 1em;
+  font-size: 62.5%;
   line-height: 1.4;
 }
 
@@ -272,12 +272,8 @@ textarea {
 */
 
 .container {
-  max-width: 1030px;
+  max-width: 103rem;
   margin: 0 auto;
-}
-
-.hidden {
-  display: none;
 }
 
 
@@ -289,8 +285,9 @@ textarea {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   position: relative;
-
-
+  max-width: 192rem;
+  margin: 0 auto;
+  /*background-color: black;*/
 }
 
 .page::before {
@@ -303,22 +300,10 @@ textarea {
   z-index: -1;
   background-color: black;
   background-image: url(/img/background.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center -3rem;
+  background-repeat: repeat-x;
 }
 
-@media only screen and (max-width: 1900px){
-  .page::before {
-
-  }
-}
-
-@media only screen and (max-width: 1700px){
-  .page::before {
-
-  }
-}
 
 .page__inner {
   display: flex;
@@ -326,21 +311,23 @@ textarea {
 }
 
 .page__header {
-  margin-bottom: 42px;
+  margin-bottom: 4.2rem;
+  height: 9.9rem;
 }
 
 .page__content {
-  max-width: 600px;
-  padding-bottom: 67px;
+  max-width: 60rem;
+  padding-bottom: 6.7rem;
+  flex-shrink: 3;
 }
 
 .page__aside {
-  max-width: 342px;
-  padding-bottom: 38px;
+  padding-bottom: 3.8rem;
+  flex-shrink: 5;
 }
 
 .page__profit {
-  height: 220px;
+  height: 22rem;
 }
 
 
@@ -351,12 +338,10 @@ textarea {
 .header {
   display: flex;
   align-items: flex-end;
-  height: 99px;
 }
 
 .header__logo {
-  width: 266px;
-  height: 44px;
+  width: 26.6rem;
 }
 
 /*
@@ -383,23 +368,20 @@ textarea {
 }
 
 .content__title {
-  margin: 0 0 19px 0;
-  font-size: 40px;
-  line-height: 40px;
+  margin: 0 0 1.9rem 0;
+  font-size: 4rem;
+  line-height: 4rem;
   font-weight: 800;
 }
 
 .content__video {
-  max-width: 601px;
-  width: 601px;
-
-  max-height: 338px;
-  height: 338px;
+  max-height: 33.8rem;
   background: white;
 }
 
 .content__text {
-  margin: 0 0 31px;
+  font-size: 1.8rem;
+  margin: 0 0 3.1rem;
 }
 
 /*
@@ -412,15 +394,15 @@ textarea {
 }
 
 .aside__enroll {
-  margin-bottom: 22px;
+  margin-bottom: 2.2rem;
 }
 
 .aside__price {
-  margin: 0 auto 15px;
+  margin: 0 auto 1.5rem;
 }
 
 .aside__offer {
-  margin: 0 auto 50px;
+  margin: 0 auto 5rem;
 
 }
 
@@ -436,49 +418,53 @@ textarea {
 }
 
 .enroll_inner {
-  padding: 28px 14px;
+  padding: 2.8rem 1.4rem;
 }
 
 .enroll__title {
   text-align: center;
-  max-width: 217px;
-  line-height: 30.64px;
-  font-size: 27px;
+  max-width: 21.7rem;
+  line-height: 3.064rem;
+  font-size: 2.7rem;
   font-weight: 800;
-  margin: 0 auto 16px;
+  margin: 0 auto 1.6rem;
 }
 
-.enroll__title > span {
-  font-size: 34px;
+.enroll__call {
+  font-size: 3.4rem;
 }
 
 .enroll__step {
-  width: 85px;
-  height: 31px;
-  line-height: 31px;
+  width: 8.5rem;
+  height: 3.1rem;
+  line-height: 3.1rem;
   text-align: center;
   border-radius: 15px;
   color: white;
   background-color: #1b0195;
-  margin: 0 auto 12px;
-
+  margin: 0 auto 1.2rem;
+  font-size: 1.6rem;
 }
 
 
 .form {
+
+}
+
+.form__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .form__input {
-  width: 302px;
-  height: 48px;
+  width: 100%;
+  height: 4.8rem;
   border-radius: 21px;
-  font-size: 16px;
+  font-size: 1.6rem;
   border: none;
   background-color: #eceef1;
-  padding: 18px;
+  padding: 1.8rem;
 
 }
 
@@ -488,23 +474,26 @@ textarea {
 }
 
 .form__group {
-  margin-bottom: 9px;
+  margin-bottom: 0.9rem;
+  flex: 1 1;
+  width: 100%;
 }
 
+
 .form__submit {
+  width: 100%;
   text-decoration: none;
   text-align: center;
-  width: 302px;
-  line-height: 58px;
+  max-width: 30.2rem;
+  line-height: 5.8rem;
   border: none;
-  font-size: 15px;
+  font-size: 1.5rem;
   border-radius: 28px;
   color: white;
   background-image: linear-gradient(to top, #ff6a52 0%, #fd3675 100%);
   font-weight: 800;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.31);
   cursor: pointer;
-  padding-left: 0;
 }
 
 
@@ -516,18 +505,18 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 250px;
-  height: 30px;
+  width: 25rem;
+  height: 3rem;
 }
 
 .offer__flag {
-  width: 40px;
-  height: 25px;
+  width: 4rem;
+  height: 2.5rem;
 }
 
 .offer__text {
-  width: 190px;
-  font-size: 14px;
+  width: 19rem;
+  font-size: 1.4rem;
   color: white;
 }
 
@@ -540,7 +529,7 @@ textarea {
 */
 
 .price {
-  font-size: 24px;
+  font-size: 2.4rem;
   color: white;
 }
 
@@ -556,13 +545,22 @@ textarea {
 
 }
 
+.marks__inner {
+ overflow: hidden;
+}
+
 .marks__list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  justify-content: space-between;
+  justify-content: center;
   padding-left: 0;
   padding-right: 0;
-  margin: 0;
+  margin: 0 0 -1rem -1rem;
+}
+
+.marks__item {
+  margin: 0 0 1rem 1rem;
 }
 
 /*
@@ -570,25 +568,25 @@ textarea {
 */
 .profit {
   background: linear-gradient(white 0%, white 57%, #130263 57%);
-  padding-top: 11px;
+  padding-top: 1.1rem;
 
 
 }
 
 .profit__title {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   text-transform: uppercase;
   font-weight: 800;
   color: black;
-  margin: 0 0 32px 20px;
+  margin: 0 0 3.2rem 2rem;
 }
 
 .profit__slider {
 }
 
 .profit__profit-card {
-  margin: 0 20px;
+  margin: 0 2.0rem;
 }
 
 /*
@@ -596,12 +594,12 @@ textarea {
 */
 
 .profit-card {
-  height: 124px;
-  width: 240px;
+  height: 12.4rem;
+  width: 24rem;
   box-shadow: 0 0 18px rgba(62, 39, 157, 0.4);
   border-radius: 5px;
   background-color: #ffffff;
-  padding: 18px 20px 23px;
+  padding: 1.8rem 2.0rem 2.3rem;
 }
 
 .profit-card__inner {
@@ -610,26 +608,26 @@ textarea {
 .profit-card__title {
   color: black;
   font-weight: 800;
-  font-size: 19px;
-  line-height: 19px;
-  margin-bottom: 6px;
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  margin-bottom: 0.6rem;
 }
 
 .profit-card__info {
-  font-size: 17px;
-  line-height: 17px;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
   color: #6b6b6b;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 1.8rem;
 }
 
 .profit-card__earned {
   color: #fd3675;
   font-weight: 800;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
   margin: 0;
 }
 
@@ -647,28 +645,28 @@ textarea {
   position: relative;
   background: white;
   width:auto;
-  max-width: 400px;
+  max-width: 40rem;
   margin: 0 auto;
   border-radius: 4px;
-  padding: 30px 15px;
+  padding: 3rem 1.5rem;
 }
 
 .popup__header {
   text-align: center;
-  font-size: 27px;
-  line-height: 27px;
+  font-size: 2.7rem;
+  line-height: 2.7rem;
   font-weight: 800;
-  margin: 0 auto 30px;
+  margin: 0 auto 3rem;
 
 }
 
 .popup__text {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
   background-color: #eceef1;
   border-radius: 21px;
-  padding: 18px;
-  margin: 0 0 15px;
+  padding: 1.8rem;
+  margin: 0 0 1.5rem;
 
 }
 
@@ -703,3 +701,206 @@ textarea {
   opacity: 0;
 }
 
+
+/*
+* responsibility
+*/
+
+
+
+
+@media only screen and (max-width: 68em){
+  .page::before {
+    /*background-size: auto;*/
+  }
+}
+
+@media only screen and (max-width: 68em) {
+
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+
+  .page::before {
+    background-position-y: -70px;
+  }
+
+  .page__content {
+  }
+
+  .page__aside {
+
+  }
+
+  .content__title {
+    font-size: 2.8rem;
+  }
+
+  .content__text {
+    font-size: 1.6rem;
+  }
+
+  .header__logo {
+    width: 23rem;
+    height: auto;
+  }
+
+  .page__header {
+    height: 6.9rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .enroll__title {
+    font-size: 2.5rem;
+  }
+
+  .enroll__call {
+    font-size: 2.8rem
+  }
+
+
+  .page__content {
+    margin-right: 3rem;
+  }
+
+  .page__aside {
+  }
+
+  .form__submit {
+    font-size: 1.2rem;
+  }
+
+  .form__input {
+    font-size: 1.4rem;
+  }
+
+  .enroll__step {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 48em){
+
+  .page::before {
+    background-position-y: -0.3rem;
+  }
+
+  .page__header {
+    height: 6.3rem;
+  }
+
+  .header__logo {
+    width: 20rem;
+  }
+
+  .page__content {
+    max-width: initial;
+    margin-right: 0;
+    margin-bottom: 6rem;
+    flex-shrink: 1;
+  }
+
+  .page__aside {
+    width: 100%;
+    max-width: 56.4rem;
+    flex-shrink: 1;
+  }
+
+  .container {
+    padding: 0 4rem;
+  }
+
+  .page__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content__title {
+    font-size: 2.4rem;
+  }
+
+  .content__video {
+
+    max-width: 56.4rem;
+
+    border-radius: 2px;
+    margin: 0 auto;
+  }
+
+  .aside__price {
+    text-align: center;
+  }
+
+  .form__group {
+    margin-bottom: 1.7rem;
+  }
+
+  .form__submit {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 34em){
+
+  .popup__text {
+    font-size: 1.4rem;
+  }
+
+
+  .page::before {
+    background-position-y: -6.5rem;
+  }
+
+  .container {
+    padding: 0 1.6rem;
+  }
+
+  .content__title {
+    font-size: 2.2rem;
+    line-height: initial;
+  }
+
+  .content__text {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 25em){
+
+  .popup {
+    margin: 0 1.6rem;
+  }
+
+
+  .form__submit {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 1.4rem
+  }
+
+  .page__profit {
+    height: 27rem;
+  }
+
+
+
+}
+
+
+/*@media only screen and (max-width: 25em){*/
+
+/*  .header__logo {*/
+/*    width: 2rem;*/
+/*    height: auto;*/
+/*  }*/
+
+/*}*/
