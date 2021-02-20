@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "impliedStrict": true
+  },
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  // add your custom rules here
+  "ignorePatterns": ["/dist"],
+  "rules": {
+    "func-names": "off"
+  }
+}
