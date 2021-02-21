@@ -5,11 +5,8 @@
 @import './base.css';
 
 @import './blocks/page.css';
-
 @import './blocks/header.css';
-
 @import './blocks/navigation.css';
-
 @import './blocks/content.css';
 @import './blocks/aside.css';
 @import './blocks/enroll.css';
