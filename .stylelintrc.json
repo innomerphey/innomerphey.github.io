@@ -1,6 +1,7 @@
 {
   "extends": [
-    "stylelint-prettier/recommended"
+    "stylelint-prettier/recommended",
+    "stylelint-config-idiomatic-order"
   ],
   "plugins": [
     "stylelint-order"
