@@ -12,8 +12,9 @@
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
+    "lint:js": "eslint . --ext .js",
+    "lint:css": "npx stylelint ./css",
+    "lint": "yarn lint:js & yarn lint:css",
     "stylelint-check": "stylelint-config-prettier-check"
   },
   "devDependencies": {
