@@ -1,0 +1,12 @@
+
+.navigation__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navigation__item {
+  display: block;
+}
+

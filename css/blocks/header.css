@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header__logo {
+  width: 26.6rem;
+}

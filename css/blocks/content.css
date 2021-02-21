@@ -1,0 +1,20 @@
+.content {
+  color: white;
+}
+
+.content__title {
+  margin: 0 0 1.9rem 0;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 4rem;
+}
+
+.content__video {
+  max-height: 33.8rem;
+  background: white;
+}
+
+.content__text {
+  margin: 0 0 3.1rem;
+  font-size: 1.8rem;
+}

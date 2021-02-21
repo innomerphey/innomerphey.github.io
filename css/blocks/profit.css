@@ -1,0 +1,59 @@
+.profit {
+  padding-top: 1.1rem;
+  background: linear-gradient(white 0%, white 57%, #130263 57%);
+}
+
+.profit__title {
+  margin: 0 0 3.2rem 2rem;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+}
+
+.profit__profit-card {
+  margin: 0 2rem;
+}
+
+/*
+* profit-card
+*/
+
+.profit-card {
+  width: 24rem;
+  height: 12.4rem;
+  padding: 1.8rem 2rem 2.3rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 18px rgba(62, 39, 157, 0.4);
+}
+
+.profit-card__inner {
+}
+
+.profit-card__title {
+  margin-bottom: 0.6rem;
+  color: black;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.9rem;
+}
+
+.profit-card__info {
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  color: #6b6b6b;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+}
+
+.profit-card__earned {
+  margin: 0;
+  color: #fd3675;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 2.4rem;
+}
