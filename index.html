@@ -36,7 +36,10 @@
     <ul class="navigation__list">
       <li>
         <a class="navigation__item" href="#">
-          <img class="header__logo" src="img/logo.png" alt="logo">
+          <picture>
+            <source srcset="img/logo.webp" type="image/webp">
+            <img class="header__logo" src="img/logo.png" alt="logo">
+          </picture>
         </a>
       </li>
     </ul>
@@ -65,7 +68,8 @@
 
     </section>
     <section data-video class="content__video">
-      <iframe title="Youtube Anthony Pomp Pompliano talks Bitcoin on CNN"  width="601" height="338" src="https://www.youtube.com/embed/EtfpKY94whw" frameborder="0"
+      <iframe title="Youtube Anthony Pomp Pompliano talks Bitcoin on CNN" width="601" height="338"
+              src="https://www.youtube.com/embed/EtfpKY94whw" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
     </section>
@@ -136,7 +140,12 @@
 
     <!--region offer-->
     <div class="offer aside__offer">
-      <div><img class="offer__flag" src="./img/flag.png" alt="Ukrainian flag"></div>
+      <div>
+        <picture>
+          <source srcset="./img/flag.webp" type="image/webp">
+          <img class="offer__flag" src="./img/flag.png" alt="Ukrainian flag">
+        </picture>
+      </div>
       <div class="offer__text">
         We have an exclusive offer for traders in <span class="offer__country">Ukraine</span>
       </div>
@@ -153,10 +162,37 @@
     <div class="marks">
       <div class="marks__inner">
         <ul class="marks__list">
-          <li class="marks__item"><a href="#"><img src="./img/marks/mark-bitgo.png" alt="mark-bitgo"></a></li>
-          <li class="marks__item"><a href="#"><img src="./img/marks/mark-macafee.png" alt="mark-macafee"></a></li>
-          <li class="marks__item"><a href="#"><img src="./img/marks/mark-norton.png" alt="mark-norton"></a></li>
-          <li class="marks__item"><a href="#"><img src="./img/marks/mark-secure-trading.png" alt="mark-secure-trading"></a>
+          <li class="marks__item">
+            <a href="#">
+              <picture>
+                <source srcset="./img/marks/mark-bitgo.webp" type="image/webp">
+                <img src="./img/marks/mark-bitgo.png" alt="mark-bitgo">
+              </picture>
+            </a>
+          </li>
+          <li class="marks__item">
+            <a href="#">
+              <picture>
+                <source srcset="./img/marks/mark-macafee.webp" type="image/webp">
+                <img src ="./img/marks/mark-macafee.png" alt="mark-macafee">
+              </picture>
+            </a>
+          </li>
+          <li class="marks__item">
+            <a href="#">
+              <picture>
+                <source srcset="./img/marks/mark-norton.webp" type="image/webp">
+                <img src="./img/marks/mark-norton.png" alt="mark-norton">
+              </picture>
+            </a>
+          </li>
+          <li class="marks__item">
+            <a href="#">
+              <picture>
+                <source srcset="./img/marks/mark-secure-trading.webp" type="image/webp">
+                <img src="./img/marks/mark-secure-trading.png" alt="mark-secure-trading">
+              </picture>
+            </a>
           </li>
         </ul>
       </div>
