@@ -1,0 +1,157 @@
+@media only screen and (max-width: 68em) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .page::before {
+    background-position-y: -70px;
+  }
+
+  .content__title {
+    font-size: 2.8rem;
+  }
+
+  .content__text {
+    font-size: 1.6rem;
+  }
+
+  .header__logo {
+    width: 23rem;
+    height: auto;
+  }
+
+  .page__header {
+    height: 6.9rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .enroll__title {
+    font-size: 2.5rem;
+  }
+
+  .enroll__call {
+    font-size: 2.8rem;
+  }
+
+  .page__content {
+    margin-right: 3rem;
+  }
+
+  .form__submit {
+    font-size: 1.2rem;
+  }
+
+  .form__input {
+    font-size: 1.4rem;
+  }
+
+  .enroll__step {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .page::before {
+    background-position-y: -0.3rem;
+  }
+
+  .page__header {
+    height: 6.3rem;
+  }
+
+  .header__logo {
+    width: 20rem;
+  }
+
+  .page__content {
+    max-width: initial;
+    margin-right: 0;
+    margin-bottom: 6rem;
+    flex-shrink: 1;
+  }
+
+  .page__aside {
+    width: 100%;
+    max-width: 56.4rem;
+    flex-shrink: 1;
+  }
+
+  .container {
+    padding: 0 4rem;
+  }
+
+  .page__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content__title {
+    font-size: 2.4rem;
+  }
+
+  .content__video {
+    max-width: 56.4rem;
+
+    border-radius: 2px;
+    margin: 0 auto;
+  }
+
+  .aside__price {
+    text-align: center;
+  }
+
+  .form__group {
+    margin-bottom: 1.7rem;
+  }
+
+  .form__submit {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 34em) {
+  .popup__text {
+    font-size: 1.4rem;
+  }
+
+  .page::before {
+    background-position-y: -6.5rem;
+  }
+
+  .container {
+    padding: 0 1.6rem;
+  }
+
+  .content__title {
+    font-size: 2.2rem;
+    line-height: initial;
+  }
+
+  .content__text {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .popup {
+    margin: 0 1.6rem;
+  }
+
+  .form__submit {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 1.4rem;
+  }
+
+  .page__profit {
+    height: 27rem;
+  }
+}
