@@ -2,17 +2,21 @@
   "root": true,
   "env": {
     "browser": true,
-    "jquery": true,
-    "es6": true
+    "es2020": true,
+    "jquery": true
   },
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "impliedStrict": true
+    "ecmaVersion": 12,
+    "impliedStrict": true,
+    "sourceType": "module"
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
-  // add your custom rules here
-  "ignorePatterns": ["/dist"],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
     "func-names": "off"
   }
