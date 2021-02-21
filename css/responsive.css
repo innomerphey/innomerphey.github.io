@@ -71,9 +71,9 @@
 
   .page__content {
     max-width: initial;
+    flex-shrink: 1;
     margin-right: 0;
     margin-bottom: 6rem;
-    flex-shrink: 1;
   }
 
   .page__aside {
@@ -97,9 +97,9 @@
 
   .content__video {
     max-width: 56.4rem;
+    margin: 0 auto;
 
     border-radius: 2px;
-    margin: 0 auto;
   }
 
   .aside__price {

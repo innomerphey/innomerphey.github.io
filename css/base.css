@@ -44,10 +44,10 @@ html {
 hr {
   display: block;
   height: 1px;
+  padding: 0;
   border: 0;
   border-top: 1px solid #cccccc;
   margin: 1em 0;
-  padding: 0;
 }
 
 /*
@@ -70,9 +70,9 @@ video {
  */
 
 fieldset {
+  padding: 0;
   border: 0;
   margin: 0;
-  padding: 0;
 }
 
 /*
@@ -110,15 +110,15 @@ textarea {
  */
 
 .sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
   position: absolute;
-  white-space: nowrap;
+  overflow: hidden;
   width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
   /* 1 */
 }
 
@@ -130,13 +130,13 @@ textarea {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-  clip: auto;
+  position: static;
+  overflow: visible;
+  width: auto;
   height: auto;
   margin: 0;
-  overflow: visible;
-  position: static;
+  clip: auto;
   white-space: inherit;
-  width: auto;
 }
 
 /*
@@ -161,8 +161,8 @@ textarea {
 
 .clearfix::before,
 .clearfix::after {
-  content: ' ';
   display: table;
+  content: ' ';
 }
 
 .clearfix::after {
@@ -197,9 +197,9 @@ textarea {
   *::before,
   *::after {
     background: #ffffff !important;
-    color: #000000 !important;
     /* Black prints faster */
     box-shadow: none !important;
+    color: #000000 !important;
     text-shadow: none !important;
   }
 
@@ -281,26 +281,26 @@ textarea {
 */
 
 .page {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
   position: relative;
   max-width: 192rem;
   margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   /*background-color: black;*/
 }
 
 .page::before {
-  content: '';
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
   background-color: black;
   background-image: url(/img/background.jpg);
   background-position: center -3rem;
   background-repeat: repeat-x;
+  content: '';
 }
 
 .page__inner {
@@ -309,19 +309,19 @@ textarea {
 }
 
 .page__header {
-  margin-bottom: 4.2rem;
   height: 9.9rem;
+  margin-bottom: 4.2rem;
 }
 
 .page__content {
   max-width: 60rem;
-  padding-bottom: 6.7rem;
   flex-shrink: 3;
+  padding-bottom: 6.7rem;
 }
 
 .page__aside {
-  padding-bottom: 3.8rem;
   flex-shrink: 5;
+  padding-bottom: 3.8rem;
 }
 
 .page__profit {
@@ -367,8 +367,8 @@ textarea {
 .content__title {
   margin: 0 0 1.9rem 0;
   font-size: 4rem;
-  line-height: 4rem;
   font-weight: 800;
+  line-height: 4rem;
 }
 
 .content__video {
@@ -377,8 +377,8 @@ textarea {
 }
 
 .content__text {
-  font-size: 1.8rem;
   margin: 0 0 3.1rem;
+  font-size: 1.8rem;
 }
 
 /*
@@ -408,8 +408,8 @@ textarea {
 
 .enroll {
   background-color: white;
-  color: black;
   border-radius: 5px;
+  color: black;
 }
 
 .enroll_inner {
@@ -417,12 +417,12 @@ textarea {
 }
 
 .enroll__title {
-  text-align: center;
   max-width: 21.7rem;
-  line-height: 3.064rem;
+  margin: 0 auto 1.6rem;
   font-size: 2.7rem;
   font-weight: 800;
-  margin: 0 auto 1.6rem;
+  line-height: 3.064rem;
+  text-align: center;
 }
 
 .enroll__call {
@@ -432,13 +432,13 @@ textarea {
 .enroll__step {
   width: 8.5rem;
   height: 3.1rem;
-  line-height: 3.1rem;
-  text-align: center;
+  margin: 0 auto 1.2rem;
+  background-color: #1b0195;
   border-radius: 15px;
   color: white;
-  background-color: #1b0195;
-  margin: 0 auto 1.2rem;
   font-size: 1.6rem;
+  line-height: 3.1rem;
+  text-align: center;
 }
 
 .form__inner {
@@ -450,11 +450,11 @@ textarea {
 .form__input {
   width: 100%;
   height: 4.8rem;
-  border-radius: 21px;
-  font-size: 1.6rem;
+  padding: 1.8rem;
   border: none;
   background-color: #eceef1;
-  padding: 1.8rem;
+  border-radius: 21px;
+  font-size: 1.6rem;
 }
 
 .form__input::placeholder {
@@ -463,25 +463,25 @@ textarea {
 }
 
 .form__group {
-  margin-bottom: 0.9rem;
-  flex: 1 1;
   width: 100%;
+  flex: 1 1;
+  margin-bottom: 0.9rem;
 }
 
 .form__submit {
   width: 100%;
-  text-decoration: none;
-  text-align: center;
   max-width: 30.2rem;
-  line-height: 5.8rem;
   border: none;
-  font-size: 1.5rem;
+  background-image: linear-gradient(to top, #ff6a52 0%, #fd3675 100%);
   border-radius: 28px;
   color: white;
-  background-image: linear-gradient(to top, #ff6a52 0%, #fd3675 100%);
-  font-weight: 800;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.31);
   cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 5.8rem;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.31);
 }
 
 /*
@@ -490,10 +490,10 @@ textarea {
 
 .offer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 25rem;
   height: 3rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .offer__flag {
@@ -503,8 +503,8 @@ textarea {
 
 .offer__text {
   width: 19rem;
-  font-size: 1.4rem;
   color: white;
+  font-size: 1.4rem;
 }
 
 .offer__country {
@@ -516,8 +516,8 @@ textarea {
 */
 
 .price {
-  font-size: 2.4rem;
   color: white;
+  font-size: 2.4rem;
 }
 
 .price__text {
@@ -535,11 +535,11 @@ textarea {
 .marks__list {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   justify-content: center;
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
   margin: 0 0 -1rem -1rem;
+  list-style: none;
 }
 
 .marks__item {
@@ -550,17 +550,17 @@ textarea {
 * profit
 */
 .profit {
-  background: linear-gradient(white 0%, white 57%, #130263 57%);
   padding-top: 1.1rem;
+  background: linear-gradient(white 0%, white 57%, #130263 57%);
 }
 
 .profit__title {
+  margin: 0 0 3.2rem 2rem;
+  color: black;
   font-size: 1.4rem;
+  font-weight: 800;
   line-height: 1.4rem;
   text-transform: uppercase;
-  font-weight: 800;
-  color: black;
-  margin: 0 0 3.2rem 2rem;
 }
 
 .profit__profit-card {
@@ -572,41 +572,41 @@ textarea {
 */
 
 .profit-card {
-  height: 12.4rem;
   width: 24rem;
-  box-shadow: 0 0 18px rgba(62, 39, 157, 0.4);
-  border-radius: 5px;
-  background-color: #ffffff;
+  height: 12.4rem;
   padding: 1.8rem 2rem 2.3rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 18px rgba(62, 39, 157, 0.4);
 }
 
 .profit-card__inner {
 }
 
 .profit-card__title {
-  color: black;
-  font-weight: 800;
-  font-size: 1.9rem;
-  line-height: 1.9rem;
   margin-bottom: 0.6rem;
+  color: black;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.9rem;
 }
 
 .profit-card__info {
-  font-size: 1.7rem;
-  line-height: 1.7rem;
-  color: #6b6b6b;
-  font-weight: 700;
-  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 1.8rem;
+  color: #6b6b6b;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+  text-transform: uppercase;
 }
 
 .profit-card__earned {
-  color: #fd3675;
-  font-weight: 800;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
   margin: 0;
+  color: #fd3675;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 2.4rem;
 }
 
 /*
@@ -619,29 +619,29 @@ textarea {
 
 .popup {
   position: relative;
-  background: white;
   width: auto;
   max-width: 40rem;
-  margin: 0 auto;
-  border-radius: 4px;
   padding: 3rem 1.5rem;
+  margin: 0 auto;
+  background: white;
+  border-radius: 4px;
 }
 
 .popup__header {
-  text-align: center;
-  font-size: 2.7rem;
-  line-height: 2.7rem;
-  font-weight: 800;
   margin: 0 auto 3rem;
+  font-size: 2.7rem;
+  font-weight: 800;
+  line-height: 2.7rem;
+  text-align: center;
 }
 
 .popup__text {
-  font-size: 1.6rem;
-  font-weight: 500;
-  background-color: #eceef1;
-  border-radius: 21px;
   padding: 1.8rem;
   margin: 0 0 1.5rem;
+  background-color: #eceef1;
+  border-radius: 21px;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 /* ====== Zoom effect ====== */
@@ -653,8 +653,8 @@ textarea {
 
 .mfp-zoom-in .mfp-with-anim {
   opacity: 0;
-  transition: all 0.2s ease-in-out;
   transform: scale(0.8);
+  transition: all 0.2s ease-in-out;
 }
 
 .mfp-zoom-in.mfp-bg {
@@ -672,8 +672,8 @@ textarea {
 }
 
 .mfp-zoom-in.mfp-removing .mfp-with-anim {
-  transform: scale(0.8);
   opacity: 0;
+  transform: scale(0.8);
 }
 
 .mfp-zoom-in.mfp-removing.mfp-bg {
