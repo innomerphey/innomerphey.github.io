@@ -13,18 +13,22 @@
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "2.22.1",
-    "parcel-bundler": "^1.12.4"
-  },
-  "dependencies": {
     "eslint": "7.2.0",
+    "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
-  }
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.11.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2"
+  },
+  "dependencies": {}
 }
