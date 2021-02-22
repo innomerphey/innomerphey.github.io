@@ -19,7 +19,7 @@
 
   <!--region styles-->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1,npm/slick-carousel@1.8.1/slick/slick.min.css,npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
+        href="https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1,npm/slick-carousel@1.8.1/slick/slick.min.css,npm/magnific-popup@1.1.0/dist/magnific-popup.min.css,npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
   <!--endregion-->
@@ -72,11 +72,14 @@
 
     </section>
     <section data-video class="content__video">
-      <h2 class="visually-hidden">Anthony Pomp Pompliano talks Bitcoin on CNN</h2>
-      <iframe class="content__iframe" title="Youtube Anthony Pomp Pompliano talks Bitcoin on CNN" width="601" height="338"
-              src="https://www.youtube.com/embed/EtfpKY94whw"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+      <lite-youtube videoid="jhY-gVuiIV4" style="background-image: url('https://i.ytimg.com/vi/jhY-gVuiIV4/hqdefault.jpg');">
+        <button type="button" class="lty-playbtn">
+          <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+        </button>
+      </lite-youtube>
+
+
+
     </section>
   </main>
   <!--endregion-->
@@ -417,6 +420,7 @@
   src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/jquery-validation@1.19.3,npm/fitvids.js@1.2.0,npm/slick-carousel@1.8.1,npm/magnific-popup@1.1.0"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.min.js"></script>
 <!--endregion-->
 
 </body>

@@ -38,9 +38,6 @@ $(document).ready(function () {
       openPopup()
     },
   })
-
-  // fitVids resize video iframe
-  $('[data-video]').fitVids()
 })
 
 // ==========================================================
