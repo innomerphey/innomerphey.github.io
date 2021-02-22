@@ -30,5 +30,16 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 2%",
+          "last 3 versions",
+          "ie 11"
+        ]
+      }
+    }
   }
 }
