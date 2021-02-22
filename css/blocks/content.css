@@ -18,3 +18,7 @@
   margin: 0 0 3.1rem;
   font-size: 1.8rem;
 }
+
+.content__iframe {
+  border: none;
+}
