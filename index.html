@@ -39,8 +39,10 @@
       <li>
         <a class="navigation__item" href="#">
           <picture>
-            <source srcset="img/logo.webp" type="image/webp">
-            <img class="header__logo" src="img/logo.png" alt="logo">
+            <source sizes="(min-width: 48em) 230px, (min-width: 64em) 266px, 200px"
+                    srcset="img/logo@2x.webp 532w, img/logo.webp 266w, img/logo@086x.webp 233w" type="image/webp">
+            <img class="header__logo" src="img/logo.png" srcset="img/logo.png 266w, img/logo@2x.png 532w"
+                 sizes="(min-width: 48em) 230px, (min-width: 64em) 266px, 200px" alt="logo">
           </picture>
         </a>
       </li>
