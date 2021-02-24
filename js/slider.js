@@ -10,7 +10,7 @@ const config = {
   centerMode: true,
   adaptiveHeight: true,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 4000,
 }
 
 // eslint-disable-next-line import/prefer-default-export
