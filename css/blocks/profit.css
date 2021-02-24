@@ -4,7 +4,7 @@
 }
 
 .profit__title {
-  margin: 0 0 3.2rem 2rem;
+  margin: 0 0 1.2rem 2rem;
   color: black;
   font-size: 1.4rem;
   font-weight: 800;
@@ -12,27 +12,23 @@
   text-transform: uppercase;
 }
 
-.profit__profit-card {
-  margin: 0 2rem;
+.profit__card-wrap {
+  display: inline-block;
 }
 
-/*
-* profit-card
-*/
+.profit__profit-card {
+  margin: 2rem;
+}
 
 .profit-card {
-  width: 24rem;
-  height: 12.4rem;
   padding: 1.8rem 2rem 2.3rem;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 0 18px rgba(62, 39, 157, 0.4);
 }
 
-.profit-card__inner {
-}
-
 .profit-card__title {
+  margin-top: 0;
   margin-bottom: 0.6rem;
   color: black;
   font-size: 1.9rem;
