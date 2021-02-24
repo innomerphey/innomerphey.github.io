@@ -12,6 +12,7 @@
   background-color: #eceef1;
   border-radius: 21px;
   font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .form__input::placeholder {
