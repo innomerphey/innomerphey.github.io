@@ -1,0 +1,17 @@
+.marks__inner {
+  overflow: hidden;
+}
+
+.marks__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 0 -1rem -1rem;
+  list-style: none;
+}
+
+.marks__item {
+  margin: 0 0 1rem 1rem;
+}

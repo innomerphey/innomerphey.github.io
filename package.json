@@ -2,16 +2,44 @@
   "name": "normo-test",
   "version": "0.0.1",
   "description": "",
-  "keywords": ["test, normo"],
+  "keywords": [
+    "test, normo"
+  ],
   "license": "",
   "author": "",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js": "eslint . --ext .js",
+    "lint:css": "npx stylelint ./css",
+    "lint": "yarn lint:js & yarn lint:css",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.11.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 2%",
+          "last 3 versions",
+          "ie 11"
+        ]
+      }
+    }
   }
 }

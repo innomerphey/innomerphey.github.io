@@ -1,0 +1,22 @@
+.offer {
+  display: flex;
+  width: 25rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offer__flag {
+  width: 4rem;
+  height: 2.5rem;
+}
+
+.offer__text {
+  width: 19rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.offer__country {
+  color: #fd3277;
+}
