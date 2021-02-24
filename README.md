@@ -1,4 +1,7 @@
 # normo-test
+
+[https://innomerphey.github.io](https://innomerphey.github.io/)
+
  -  **Installation:**
     - Сlone the repository and run `$ yarn ` on the command line.  
     - If you come across a problem with  **eslint-config-airbnb-base** peer  dependencies then follow this [link](https://www.npmjs.com/package/eslint-config-airbnb-base)
