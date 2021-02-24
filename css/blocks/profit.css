@@ -23,8 +23,18 @@
 .profit-card {
   padding: 1.8rem 2rem 2.3rem;
   background-color: #ffffff;
+  background-position: bottom right 1.8rem;
+  background-repeat: no-repeat;
   border-radius: 5px;
   box-shadow: 0 0 18px rgba(62, 39, 157, 0.4);
+}
+
+.webp .profit-card {
+  background-image: url(/img/bg-coins.webp);
+}
+
+.no-webp .profit-card {
+  background-image: url(/img/bg-coins.png);
 }
 
 .profit-card__title {
